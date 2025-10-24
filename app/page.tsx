@@ -35,8 +35,12 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
-      <div className="container mx-auto px-4 py-8">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-violet-50/30 to-blue-50/30 dark:from-slate-950 dark:via-violet-950/20 dark:to-blue-950/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/20 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-violet-500/10 dark:bg-violet-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 py-12 relative z-10">
         {!predictions ? (
           <>
             <WelcomeSection />
